@@ -1,0 +1,221 @@
+/* =====================================================================
+   THEME REDESIGN — Modern Travel Theme — Blue Edition
+   Palette: Deep Navy + Sky Blue + Soft Azure
+   ===================================================================== */
+
+:root {
+    --default-font: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --heading-font: "Poppins", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+
+    --background-color: #f0f6ff;
+    --default-color: #2d3a4a;
+    --heading-color: #f0f6ff;
+    --accent-color: #7c3aed;
+    --accent-color-2: #7c3aed;
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff;
+    --sand-color: #7c3aed;
+}
+
+:root {
+    --nav-color: #0c1e3c;
+    --nav-hover-color: #7c3aed;
+    --nav-mobile-background-color: #ffffff;
+    --nav-dropdown-background-color: #ffffff;
+    --nav-dropdown-color: #0c1e3c;
+    --nav-dropdown-hover-color: #7c3aed;
+}
+
+.dark-background {
+    --background-color: #05111f;
+    --default-color: #ccdff6;
+    --heading-color: #ffffff;
+    --surface-color: #0a1e35;
+    --contrast-color: #ffffff;
+}
+
+body { letter-spacing: 0.01em; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 600; letter-spacing: -0.01em; }
+
+.btn-primary, .btn-getstarted {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%) !important;
+    border: none !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    padding: 0.7rem 1.6rem !important;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.28);
+    transition: 0.3s ease;
+}
+.btn-primary:hover, .btn-getstarted:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(124, 58, 237, 0.4);
+    color: #fff !important;
+}
+.btn-outline-light {
+    border-radius: 50px !important;
+    font-weight: 600;
+    padding: 0.7rem 1.6rem !important;
+}
+.btn-accent {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%) !important;
+    border: none !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    padding: 0.7rem 1.6rem !important;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+.btn-accent:hover { color: #fff !important; transform: translateY(-2px); }
+
+/* ---------- Header ---------- */
+#header { background: rgba(255,255,255,0.93); backdrop-filter: blur(10px); box-shadow: 0 2px 18px rgba(12,30,60,0.07); }
+#header .sitename { color: #7c3aed; font-weight: 700; }
+#header .sitename::before { content: "✈ "; color: var(--accent-color); }
+.navmenu ul li a { font-weight: 600; }
+.navmenu ul li a.router-active,
+.navmenu ul li a:hover { color: var(--accent-color) !important; }
+
+/* ---------- Hero / Search ---------- */
+.hero-redesign {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(5,17,31,0.80), rgba(5,17,31,0.90)),
+        url('../img/travel/destination-3.webp') center/cover no-repeat;
+    color: #fff;
+    padding-top: 100px;
+}
+.hero-redesign .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 16px; border-radius: 50px;
+    font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase; margin-bottom: 1.2rem;
+}
+.hero-redesign h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 700; line-height: 1.15; margin-bottom: 1rem;
+}
+.hero-redesign h1 span { color: #7c3aed; }
+.hero-redesign p.lead { font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 640px; }
+
+.hero-stats { display: flex; gap: 2.2rem; margin-top: 2.4rem; flex-wrap: wrap; }
+.hero-stats .stat strong { display: block; font-size: 1.8rem; font-weight: 700; color: #fff; }
+.hero-stats .stat span { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+
+.search-card {
+    background: #fff; border-radius: 20px; padding: 1.4rem;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.22);
+    margin-top: 2.6rem;
+}
+.search-card .form-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #8a9296; letter-spacing: 0.04em; }
+.search-card select, .search-card input { border-radius: 12px; border: 1px solid #e7e7e7; padding: 0.65rem 0.9rem; }
+.search-card button { white-space: nowrap; }
+
+/* ---------- Section heading ---------- */
+.section-badge {
+    display: inline-block; background: var(--sand-color); color: var(--accent-color);
+    font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 6px 16px; border-radius: 50px; margin-bottom: 0.8rem;
+}
+.section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--heading-color); margin-bottom: 0.6rem; }
+.section-sub { color: #6b7378; max-width: 640px; }
+
+/* ---------- Country / city explorer ---------- */
+.country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1.5rem; }
+.country-card {
+    position: relative; border-radius: 18px; overflow: hidden; min-height: 230px;
+    background: linear-gradient(160deg,#7c3aed , #6d28d9);
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 1.4rem;
+    color: #fff; box-shadow: 0 14px 30px rgba(124, 58, 237, 0.22);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.country-card:nth-child(3n+2) { background: linear-gradient(160deg, #7c3aed, #6d28d9); box-shadow: 0 14px 30px rgba(124, 58, 237, 0.22); }
+.country-card:nth-child(3n+3) { background: linear-gradient(160deg, #0c1e3c, #1e3a6e); box-shadow: 0 14px 30px rgba(12,30,60,0.28); }
+.country-card:hover { transform: translateY(-6px); }
+.country-card .flag-icon { font-size: 2rem; margin-bottom: 0.6rem; }
+.country-card h4 { color: #fff; font-weight: 700; margin-bottom: 0.4rem; }
+.country-card .city-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.6rem; }
+.city-pill {
+    background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.3);
+    padding: 4px 12px; border-radius: 50px; font-size: 0.78rem; font-weight: 600; color: #fff;
+}
+.country-card .count-badge {
+    position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.92);
+    color: var(--heading-color); font-weight: 700; font-size: 0.78rem;
+    padding: 4px 10px; border-radius: 50px;
+}
+
+/* ---------- Generic content cards (destination/hotel/transport/package) ---------- */
+.tt-card {
+    background: var(--surface-color); border-radius: 18px; overflow: hidden;
+    box-shadow: 0 8px 24px rgba(12,30,60,0.08); transition: transform .3s ease, box-shadow .3s ease;
+    height: 100%; display: flex; flex-direction: column; border: 1px solid rgba(12,30,60,0.05);
+}
+.tt-card:hover { transform: translateY(-6px); box-shadow: 0 18px 34px rgba(12,30,60,0.14); }
+.tt-card .tt-card-img { position: relative; height: 200px; overflow: hidden; background: #dbeafe; }
+.tt-card .tt-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.tt-card:hover .tt-card-img img { transform: scale(1.06); }
+.tt-card .tt-card-badge {
+    position: absolute; top: 12px; left: 12px; background: var(--accent-color); color: #fff;
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+    padding: 5px 12px; border-radius: 50px;
+}
+.tt-card .tt-card-badge.full { background: #b3261e; }
+.tt-card .tt-card-price {
+    position: absolute; bottom: 12px; right: 12px; background: #fff; color: #6d28d9;
+    font-weight: 700; padding: 5px 14px; border-radius: 50px; font-size: 0.92rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.tt-card-body { padding: 1.2rem 1.3rem 1.4rem; display: flex; flex-direction: column; flex: 1; }
+.tt-card-body h5 { font-weight: 700; color: #7c3aed; margin-bottom: 0.4rem; }
+.tt-card-meta { display: flex; align-items: center; gap: 6px; color: #7c3aed; font-size: 0.85rem; margin-bottom: 0.5rem; }
+.tt-card-meta i { color: #7c3aed; }
+.tt-card-body p.desc { color: #6b7378; font-size: 0.9rem; flex: 1; }
+.tt-card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed #e7e7e7; }
+.tt-card-foot .stars i { color: #ffb400; font-size: 0.85rem; }
+
+/* status pill */
+.status-pill { font-size: 0.74rem; font-weight: 700; padding: 4px 11px; border-radius: 50px; }
+.status-pill.available { background: #e3f7ed; color: #0f9d58; }
+.status-pill.full { background: #fdeaea; color: #b3261e; }
+
+/* ---------- Filter bar ---------- */
+.filter-bar { background: #fff; border-radius: 16px; padding: 1.1rem 1.3rem; box-shadow: 0 6px 20px rgba(12,30,60,0.06); margin-bottom: 2.2rem; }
+.filter-bar select, .filter-bar input { border-radius: 10px; }
+
+/* ---------- Package include/exclude ---------- */
+.incl-list li, .excl-list li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 0.55rem; font-size: 0.94rem; }
+.incl-list i { color: #0f9d58; margin-top: 3px; }
+.excl-list i { color: #b3261e; margin-top: 3px; }
+
+/* ---------- CTA banner ---------- */
+.cta-banner {
+    background: linear-gradient(135deg, #0c1e3c 0%, #1d6ff2 100%);
+    border-radius: 24px; padding: 3rem; color: #fff; position: relative; overflow: hidden;
+}
+.cta-banner::after {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(circle at 85% 20%, rgba(14,165,233,0.4), transparent 55%);
+}
+.cta-banner * { position: relative; z-index: 1; }
+
+/* breadcrumb hero (inner pages) */
+.page-hero {
+    padding: 140px 0 70px; text-align: center; color: #fff;
+    background: linear-gradient(180deg, rgba(5,17,31,0.84), rgba(5,17,31,0.90)),
+        url('../img/travel/destination-7.webp') center/cover no-repeat;
+}
+.page-hero h1 { font-weight: 700; }
+.page-hero .breadcrumb-trail a { color: rgba(255,255,255,0.8); }
+.page-hero .breadcrumb-trail span { color: #7c3aed; }
+
+@media (max-width: 768px) {
+    .hero-redesign { min-height: auto; padding: 130px 0 60px; }
+    .hero-stats { gap: 1.4rem; }
+}
